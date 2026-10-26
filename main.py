@@ -70,15 +70,15 @@ while True:
             eye_closed_frames += 1
 
             if eye_closed_frames >= CONSEC_FRAMES:
-                # ALERT STATE
+                # 🚨 ALERT STATE
                 draw_alert(frame, avg_ear)
                 play_alert()
             else:
-                #  DROWSY WARNING STATE
+                # ⚠️ DROWSY WARNING STATE
                 draw_drowsy(frame, avg_ear)
                 stop_alert()
         else:
-            # AWAKE STATE
+            # ✅ AWAKE STATE
             eye_closed_frames = 0
             stop_alert()
             draw_awake(frame, avg_ear)
